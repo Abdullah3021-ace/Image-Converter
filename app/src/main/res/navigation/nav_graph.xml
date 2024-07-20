@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.imageconvertpro.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_compressorType"
+            app:destination="@id/compressorType" />
+        <action
+            android:id="@+id/action_home2_to_imageConverter"
+            app:destination="@id/imageConverter" />
+        <action
+            android:id="@+id/action_home2_to_myCreations"
+            app:destination="@id/myCreations" />
+    </fragment>
+    <fragment
+        android:id="@+id/compressorType"
+        android:name="com.example.imageconvertpro.fragments.CompressorType"
+        android:label="fragment_compressor_type"
+        tools:layout="@layout/fragment_compressor_type" >
+        <action
+            android:id="@+id/action_compressorType_to_imageCompressor"
+            app:destination="@id/imageCompressor" />
+        <action
+            android:id="@+id/action_compressorType_to_multipleImageCompressor"
+            app:destination="@id/multipleImageCompressor" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageCompressor"
+        android:name="com.example.imageconvertpro.fragments.ImageCompressor"
+        android:label="fragment_image_compressor"
+        tools:layout="@layout/fragment_image_compressor" />
+    <fragment
+        android:id="@+id/imageConverter"
+        android:name="com.example.imageconvertpro.fragments.ImageConverter"
+        android:label="fragment_image_converter"
+        tools:layout="@layout/fragment_image_converter" />
+    <fragment
+        android:id="@+id/myCreations"
+        android:name="com.example.imageconvertpro.fragments.MyCreations"
+        android:label="fragment_my_creations"
+        tools:layout="@layout/fragment_my_creations" />
+    <fragment
+        android:id="@+id/multipleImageCompressor"
+        android:name="com.example.imageconvertpro.fragments.MultipleImageCompressor"
+        android:label="fragment_multiple_image_compressor"
+        tools:layout="@layout/fragment_multiple_image_compressor" >
+        <action
+            android:id="@+id/action_multipleImageCompressor_to_selectImages"
+            app:destination="@id/selectImages" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectImages"
+        android:name="com.example.imageconvertpro.fragments.SelectImages"
+        android:label="fragment_select_images"
+        tools:layout="@layout/fragment_select_images" >
+        <action
+            android:id="@+id/action_selectImages_to_MCompressor"
+            app:destination="@id/MCompressor" />
+    </fragment>
+    <fragment
+        android:id="@+id/MCompressor"
+        android:name="com.example.imageconvertpro.fragments.MCompressor"
+        android:label="fragment_m_compressor"
+        tools:layout="@layout/fragment_m_compressor" >
+        <action
+            android:id="@+id/action_MCompressor_to_compressorType"
+            app:destination="@id/compressorType" />
+    </fragment>
+</navigation>
